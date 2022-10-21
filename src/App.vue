@@ -1,6 +1,72 @@
 <template>
   <v-app id="inspire">
-    <v-app-bar
+  <v-app-bar app fixed dark elevation="1" extension-height="40">
+      <v-container class="fill-height">
+      <v-row class="align-center">
+       <v-avatar
+        class="mr-3"
+        color="grey lighten-5"
+        size="40"
+      >
+        <v-img
+          contain
+          max-height="70%"
+          src="../src/assets/spider-web-logo.svg"
+        ></v-img>
+      </v-avatar>
+      <v-toolbar-title class="font-weight-bold headline">
+        SpiderWeb
+      </v-toolbar-title>
+        <v-spacer/>
+        <v-spacer/>
+        <v-spacer/>
+        <v-toolbar dark
+      flat
+      height="30px"
+      >
+        <v-toolbar-items>
+         <v-btn>Lightpaper</v-btn>
+         <v-btn>Whitepaper</v-btn>
+         <v-btn>Wiki</v-btn>
+         <v-btn>  <v-icon
+      medium
+      color="orange darken-2"
+    >
+      mdi-git
+    </v-icon></v-btn>
+    <v-btn>
+     <v-icon
+      medium
+      color="blue darken-2"
+    >
+      mdi-twitter
+    </v-icon>
+    </v-btn>
+        <v-btn><v-icon
+      medium
+      color="blue darken-2"
+    >
+      mdi-discord
+    </v-icon>
+        </v-btn>
+        <v-btn>
+          Support
+        </v-btn>
+        </v-toolbar-items>
+        </v-toolbar>
+     </v-row>
+      </v-container>
+      <template #extension>
+        <v-toolbar color="secondary" dark height="40px">
+         <div v-for="routerlink in routerlinks" v-bind:key="routerlink.routerlink.value" class="d-none d-sm-flex">
+          <v-btn small v-bind:key="routerlink.routerlink.value" :to="routerlink.routerlink.value" color="gray" text>
+            {{ routerlink.routerlink.text }}
+          </v-btn>
+        </div>
+        </v-toolbar>
+      </template>
+    </v-app-bar>
+    <!-- <v-app-bar
       app
       color="black"
       height="70"
@@ -18,7 +84,6 @@
           src="../src/assets/logo.svg"
         ></v-img>
       </v-avatar>
-
       <v-toolbar-title class="font-weight-bold headline">
         SpiderWeb
       </v-toolbar-title>
@@ -28,13 +93,10 @@
             {{ routerlink.routerlink.text }}
           </v-btn>
         </div>
-    </v-app-bar>
     <v-navigation-drawer v-model="drawer" absolute temporary>
       <v-list nav dense>
         <v-list-item-group>
           <v-list-item v-for="(routerlink, index) in routerlinks" v-bind:key="index">
-            <!-- <v-list-item-title @click="tab = index"> {{ routerlink.routerlink.text }}
-            </v-list-item-title> -->
             <v-btn small v-bind:key="routerlink.routerlink.value" :to="routerlink.routerlink.value" color="gray" text>
               {{ routerlink.routerlink.text }}
             </v-btn>
@@ -42,7 +104,8 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-
+    </v-app-bar> -->
+    
     <v-main class="blue-grey darken-4">
         <router-view />
     </v-main>
@@ -52,7 +115,7 @@
       height="100"
     >
       <div class="title font-weight-light grey--text text--lighten-1 text-center">
-        &copy; {{ (new Date()).getFullYear() }} — SpiderWeb
+        &copy; {{ (new Date()).getFullYear() }} — SpiderWebAI, Inc. All Rights Reserved
       </div>
     </v-footer>
   </v-app>
@@ -60,6 +123,7 @@
 
 <script>
 import { mapState } from 'vuex';
+
 export default {
   data: () => ({
     drawer: false,
@@ -102,20 +166,9 @@ export default {
   },
 }
 </script>
-<!-- <style>
-h4 {
-    font-weight: bold;
-    color: rgb(0, 110, 255);
-}
-h2 {
-    font-weight: bold;
-    color: rgb(0, 110, 255);
-}
-strong {
-    font-weight: bold;
-    color: rgb(0, 110, 255);
-}
-p {
-    text-align: justify;
-}
-</style> -->
+<!-- 
+<style>
+ .v-toolbar{
+  height: 30px;
+ }
+</style>  -->
