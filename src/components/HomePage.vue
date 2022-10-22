@@ -2,7 +2,7 @@
    <v-container>
       <section id="hero">
         <v-row no-gutters>
-           <!-- <div id="particles-js"></div> -->
+          <div id="particles-js">
           <v-img
             :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
             src="../assets/background-01.png"
@@ -49,6 +49,7 @@
               </v-container>
             </v-theme-provider>
           </v-img>
+          </div>
         </v-row>
       </section>
 
@@ -329,10 +330,10 @@ export default {
       window.particlesJS("particles-js", {
                 "particles": {
                     "number": {
-                        "value": 80,
+                        "value": 100,
                         "density": {
                             "enable": true,
-                            "value_area": 700
+                            "value_area": 500
                         }
                     },
                     "color": {
@@ -359,7 +360,7 @@ export default {
                         }
                     },
                     "size": {
-                        "value": 3,
+                        "value": 7,
                         "random": true,
                         "anim": {
                             "enable": false,
@@ -436,4 +437,9 @@ export default {
 }
 </script>
 <style scoped>
+
+#particles-js {
+  width: 100%;
+  height: 100vh;
+}
 </style>
