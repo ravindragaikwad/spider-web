@@ -73,245 +73,276 @@
             max-width="720"
           >
           AI creators benefit from Build-to-Earn token incentives. In addition, a dedicated developer's Integrated Development Environment will facilitate creating and submitting models on the SpiderWeb blockchain, rewarding AI developers whose models are leveraged by a dApp or enterprise looking for state-of-the-art AI capabilities. Enterprises can securely upload their data and get tailored AI predictions by seamlessly interacting with smart contracts; the entry points to ML models on the SpiderWeb blockchain. Our proprietary Perfect-Fit-Model algorithm will automatically identify the best model for any use case. And our proof of training and proof-of-inference proprietary consensus mechanisms validates the model and run it on-chain network. The Core Mission of SpiderWeb is to enable a new era of AI-driven business applications by building a community that empowers AI developers as creators, simplifies AI development and deployment, and makes AI/ML models readily available for businesses at a lower cost.          </v-responsive>
-          <v-avatar
-            class="mb-12"
-            size="50"
-          >
-            <v-img src="../assets/logo.svg"></v-img>
-          </v-avatar>
-
-          <div></div>
-
-          <v-btn
-            color="grey"
-            href="#"
-            outlined
-            large
-          >
-            <span class="grey--text text--darken-1 font-weight-bold">
-                COMING SOON
-            </span>
-          </v-btn>
         </v-container>
-
-        <div class="py-12"></div>
       </section>
-
-      <section
-        id="features"
-        class="grey lighten-3"
+      <section>
+       <v-container fluid>
+      <v-row dense class="pa-1">
+      <v-col cols="4">
+        <v-card
+    class="mx-auto my-12"
+    max-width="374"
+        height="150"
+    dark
+  >
+    <v-card-title>
+      <v-icon
+        large
+        left
       >
-        <div class="py-12"></div>
-
-        <v-container class="text-center">
-          <h2 class="display-2 font-weight-bold mb-3">SpiderWeb Features</h2>
-
-          <v-responsive
-            class="mx-auto mb-12"
-            width="56"
-          >
-            <v-divider class="mb-1"></v-divider>
-
-            <v-divider></v-divider>
-          </v-responsive>
-
-          <v-row>
-            <v-col
-              v-for="({ icon, title, text }, i) in features"
-              :key="i"
-              cols="12"
-              md="4"
-            >
-              <v-card
-                class="py-12 px-4"
-                color="grey lighten-5"
-                flat
-              >
-                <v-theme-provider dark>
-                  <div>
-                    <v-avatar
-                      color="primary"
-                      size="88"
-                    >
-                      <v-icon
-                        large
-                        v-text="icon"
-                      ></v-icon>
-                    </v-avatar>
-                  </div>
-                </v-theme-provider>
-
-                <v-card-title
-                  class="justify-center font-weight-black text-uppercase"
-                  v-text="title"
-                ></v-card-title>
-
-                <v-card-text
-                  class="subtitle-1"
-                  v-text="text"
-                >
-                </v-card-text>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-container>
-
-        <div class="py-12"></div>
-      </section>
-
-      <section id="stats">
-        <v-parallax
-          :height="$vuetify.breakpoint.smAndDown ? 700 : 500"
-          src="https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-        >
-          <v-container fill-height>
-            <v-row class="mx-auto">
-              <v-col
-                v-for="[value, title] of stats"
-                :key="title"
-                cols="12"
-                md="3"
-              >
-                <div class="text-center">
-                  <div
-                    class="display-3 font-weight-black mb-4"
-                    v-text="value"
-                  ></div>
-
-                  <div
-                    class="title font-weight-regular text-uppercase"
-                    v-text="title"
-                  ></div>
-                </div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-parallax>
-      </section>
-
-      <section id="blog">
-        <div class="py-12"></div>
-
-        <v-container>
-          <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center white--text">Blog</h2>
-
-          <v-responsive
-            class="mx-auto mb-12"
-            width="56"
-          >
-            <v-divider class="mb-1"></v-divider>
-
-            <v-divider></v-divider>
-          </v-responsive>
-
-          <v-row>
-            <v-col
-              v-for="({ src, text, title }, i) in articles"
-              :key="i"
-              cols="12"
-              md="4"
-            >
-              <v-img
-                :src="src"
-                class="mb-4"
-                height="275"
-                max-width="100%"
-              ></v-img>
-
-              <h3
-                class="font-weight-black mb-4 text-uppercase"
-                v-text="title"
-              ></h3>
-
-              <div
-                class="title font-weight-light mb-5"
-                v-text="text"
-              ></div>
-
-              <v-btn
-                class="ml-n4 font-weight-black"
-                text
-              >
-                Continue Reading
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-
-        <div class="py-12"></div>
-      </section>
-
-      <v-sheet
-        id="contact"
-        color="#333333"
-        dark
-        tag="section"
-        tile
+        mdi-currency-usd
+      </v-icon>
+    Build to Earn</v-card-title>
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
       >
-        <div class="py-12"></div>
+      </v-row>
+      <div>First marketplace to enable
+peer-to-peer relation
+between AI creators and
+enterprises, through
+decentralized nodes</div>
+    </v-card-text>
+  </v-card>
+   
+   <v-card
+    class="mx-auto my-12"
+    max-width="374"
+            height="150"
 
-        <v-container>
-          <h2 class="display-2 font-weight-bold mb-3 text-uppercase text-center">Contact Us</h2>
+    dark
+  >
+    <v-card-title>
+     <v-icon
+        large
+        left
+      >
+        mdi-note-edit-outline
+      </v-icon>
+    Proprietary Consensus</v-card-title>
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
+      >
+      </v-row>
+      <div>Scalable consensus for
+validation and verification
+of AI Models,
+customizable & secure
+environment.
+</div>
+    </v-card-text>
+  </v-card>
+  <v-card
+    class="mx-auto my-12"
+    max-width="374"
+    height="150"
+    dark
+  >
+    <v-card-title>
+     <v-icon
+        large
+        left
+      >
+        mdi-code-json
+      </v-icon>
+      Developer Experience</v-card-title>
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
+      >
+      </v-row>
+      <div>Interactive user interface
+for AI creators and DAPP
+developers, in-build tools,
+tech stacks, standards.
+</div>
+    </v-card-text>
+  </v-card>
+</v-col>
+<v-col cols="4">
+  <v-card
+    class="mx-auto my-12"
+    max-width="374"
+            height="150"
+    dark
+  >
+    <v-card-title>
+     <v-icon
+        large
+        left
+      >
+        mdi-cash-multiple
+      </v-icon>
+      Bounties & Rewards</v-card-title>
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
+      >
+      </v-row>
+      <div>Business users can
+announce bounties and
+rewards for AI creators &
+access the best data
+scientist community.
+</div>
+    </v-card-text>
+  </v-card>
 
-          <v-responsive
-            class="mx-auto mb-12"
-            width="56"
-          >
-            <v-divider class="mb-1"></v-divider>
+ <v-card
+    class="mx-auto my-12"
+    max-width="374"
+  height="150"
+    dark
+  >
+    <v-card-title>
+     <v-icon
+        large
+        left
+      >
+        mdi-puzzle-edit
+      </v-icon>
+      Perfect-Model-Fit</v-card-title>
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
+      >
+      </v-row>
+      <div>A proprietary algorithm to
+identify the best model
+automatically with a smart
+contract.
+</div>
+    </v-card-text>
+  </v-card>
 
-            <v-divider></v-divider>
-          </v-responsive>
+  <v-card
+    class="mx-auto my-12"
+    max-width="374"
+                height="150"
+    dark
+  >
+    <v-card-title>
+     <v-icon
+        large
+        left
+      >
+        mdi-connection
+      </v-icon>
+      Data Connectors</v-card-title>
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
+      >
+      </v-row>
+      <div>In-build IPFS and web2
+connectors, ingest and
+integrate dataset
+seamlessly in models,
+encryption, privacy.
+</div>
+    </v-card-text>
+  </v-card>
+</v-col>
 
-          <v-theme-provider light>
-            <v-row>
-              <v-col cols="12">
-                <v-text-field
-                  flat
-                  label="Name*"
-                  solo
-                ></v-text-field>
-              </v-col>
+<v-col cols="4">
+   <v-card
+    class="mx-auto my-12"
+    max-width="374"
+    height="150"
+    dark
+  >
+    <v-card-title>
+     <v-icon
+        large
+        left
+      >
+        mdi-lan-connect
+      </v-icon>
+      Flexible Computing</v-card-title>
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
+      >
+      </v-row>
+      <div>Automatically computing
+resource allocation for the
+model training and
+predictions empowered with
+dedicated throughput.
+</div>
+    </v-card-text>
+  </v-card>
 
-              <v-col cols="12">
-                <v-text-field
-                  flat
-                  label="Email*"
-                  solo
-                ></v-text-field>
-              </v-col>
+  <v-card
+    class="mx-auto my-12"
+    max-width="374"
+                height="150"
+    dark
+  >
+    <v-card-title>
+     <v-icon
+        large
+        left
+      >
+        mdi-view-module-outline
+      </v-icon>
+      Modularity</v-card-title>
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
+      >
+      </v-row>
+      <div>High stability, short lead
+time to value, scalability,
+elasticity, upgradability,
+reliability, community
+collaboration.
+</div>
+    </v-card-text>
+  </v-card>
 
-              <v-col cols="12">
-                <v-text-field
-                  flat
-                  label="Subject*"
-                  solo
-                ></v-text-field>
-              </v-col>
+  <v-card
+    class="mx-auto my-12"
+    max-width="374"
+                height="150"
+    dark
+  >
+    <v-card-title>
+     <v-icon
+        large
+        left
+      >
+        mdi-web-box
+      </v-icon>
+      Interoperability</v-card-title>
+    <v-card-text>
+      <v-row
+        align="center"
+        class="mx-0"
+      >
+      </v-row>
+      <div>Layer 0 bridge to external
+chains, chain agnostic AI,
+Native support for smart
+contracts, tokens etc.
+</div>
+    </v-card-text>
+  </v-card>
+</v-col>
+      </v-row>
+       </v-container>
+  </section>
 
-              <v-col cols="12">
-                <v-textarea
-                  flat
-                  label="Message*"
-                  solo
-                ></v-textarea>
-              </v-col>
-
-              <v-col
-                class="mx-auto"
-                cols="auto"
-              >
-                <v-btn
-                  color="accent"
-                  x-large
-                >
-                  Submit
-                </v-btn>
-              </v-col>
-            </v-row>
-          </v-theme-provider>
-        </v-container>
-        <div class="py-12"></div>
-      </v-sheet>
    </v-container>
 </template>
 
