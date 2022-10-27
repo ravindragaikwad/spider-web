@@ -94,11 +94,6 @@
       </v-icon>
     Build to Earn</v-card-title>
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
       <div>First marketplace to enable
 peer-to-peer relation
 between AI creators and
@@ -123,11 +118,6 @@ decentralized nodes</div>
       </v-icon>
     Proprietary Consensus</v-card-title>
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
       <div>Scalable consensus for
 validation and verification
 of AI Models,
@@ -151,11 +141,6 @@ environment.
       </v-icon>
       Developer Experience</v-card-title>
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
       <div>Interactive user interface
 for AI creators and DAPP
 developers, in-build tools,
@@ -180,11 +165,6 @@ tech stacks, standards.
       </v-icon>
       Bounties & Rewards</v-card-title>
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
       <div>Business users can
 announce bounties and
 rewards for AI creators &
@@ -209,11 +189,6 @@ scientist community.
       </v-icon>
       Perfect-Model-Fit</v-card-title>
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
       <div>A proprietary algorithm to
 identify the best model
 automatically with a smart
@@ -237,11 +212,6 @@ contract.
       </v-icon>
       Data Connectors</v-card-title>
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
       <div>In-build IPFS and web2
 connectors, ingest and
 integrate dataset
@@ -268,11 +238,6 @@ encryption, privacy.
       </v-icon>
       Flexible Computing</v-card-title>
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
       <div>Automatically computing
 resource allocation for the
 model training and
@@ -297,11 +262,6 @@ dedicated throughput.
       </v-icon>
       Modularity</v-card-title>
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
       <div>High stability, short lead
 time to value, scalability,
 elasticity, upgradability,
@@ -326,11 +286,6 @@ collaboration.
       </v-icon>
       Interoperability</v-card-title>
     <v-card-text>
-      <v-row
-        align="center"
-        class="mx-0"
-      >
-      </v-row>
       <div>Layer 0 bridge to external
 chains, chain agnostic AI,
 Native support for smart

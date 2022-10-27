@@ -12,8 +12,8 @@ const state = {
         },
         {
             'routerlink': {
-                text: 'AI Marketplace',
-                value: '/AIMarketplace'
+                text: 'Products',
+                value: '/SpiderWebProducts'
             }
         },
     ]

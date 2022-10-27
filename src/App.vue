@@ -14,8 +14,8 @@
           src="../src/assets/spider-web-logo.svg"
         ></v-img>
       </v-avatar>
-      <v-toolbar-title class="font-weight-bold headline">
-        SpiderWeb
+      <v-toolbar-title>
+          <v-btn text to="/" class="font-weight-bold headline notcaps">SpiderWeb</v-btn>
       </v-toolbar-title>
         <v-spacer/>
         <v-spacer/>
@@ -58,53 +58,78 @@
       </v-container>
       <template #extension>
         <v-toolbar color="secondary" dark height="40px">
-         <div v-for="routerlink in routerlinks" v-bind:key="routerlink.routerlink.value" class="d-none d-sm-flex">
+         <!-- <div v-for="routerlink in routerlinks" v-bind:key="routerlink.routerlink.value" class="d-none d-sm-flex">
           <v-btn small v-bind:key="routerlink.routerlink.value" :to="routerlink.routerlink.value" color="gray" text>
             {{ routerlink.routerlink.text }}
           </v-btn>
+        </div> -->
+        <div>
+          <v-btn
+          dark
+          small
+          v-bind="attrs"
+          v-on="on"
+          color="gray" text
+          :to="`/`"
+        >
+          HOME
+        </v-btn>
         </div>
+         <v-menu offset-y>
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          dark
+          small
+          v-bind="attrs"
+          v-on="on"
+          color="gray" text
+        >
+          PRODUCTS
+        </v-btn>
+      </template>
+      <v-list>
+        <v-list-item
+        >
+          <v-btn
+          small
+          dark
+          v-bind:key="1"
+          :to="'/products/AIMarketplace'"
+          color="gray" 
+        >
+          AI Marketplace
+        </v-btn>
+        </v-list-item>
+         <v-list-item
+        >
+          <v-btn
+          small
+          dark
+          v-bind:key="1"
+          :to="'\products\\AIMarketplace'"
+          color="gray" 
+        >
+          Best-Model-Fit
+        </v-btn>
+        </v-list-item>
+         <v-list-item
+        >
+          <v-btn
+          small
+          dark
+          v-bind:key="1"
+          :to="'\products\\AIMarketplace'"
+          color="gray" 
+        >
+          Creator IDE
+        </v-btn>
+        </v-list-item>
+      </v-list>
+    </v-menu>
         </v-toolbar>
       </template>
     </v-app-bar>
-    <!-- <v-app-bar
-      app
-      color="black"
-      height="70"
-      dark
-    >
-    <v-app-bar-nav-icon @click="drawer = true" class="d-flex d-sm-none"></v-app-bar-nav-icon>
-      <v-avatar
-        class="mr-3"
-        color="grey lighten-5"
-        size="50"
-      >
-        <v-img
-          contain
-          max-height="70%"
-          src="../src/assets/logo.svg"
-        ></v-img>
-      </v-avatar>
-      <v-toolbar-title class="font-weight-bold headline">
-        SpiderWeb
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <div v-for="routerlink in routerlinks" v-bind:key="routerlink.routerlink.value" class="d-none d-sm-flex">
-          <v-btn small v-bind:key="routerlink.routerlink.value" :to="routerlink.routerlink.value" color="gray" text>
-            {{ routerlink.routerlink.text }}
-          </v-btn>
-        </div>
-    <v-navigation-drawer v-model="drawer" absolute temporary>
-      <v-list nav dense>
-        <v-list-item-group>
-          <v-list-item v-for="(routerlink, index) in routerlinks" v-bind:key="index">
-            <v-btn small v-bind:key="routerlink.routerlink.value" :to="routerlink.routerlink.value" color="gray" text>
-              {{ routerlink.routerlink.text }}
-            </v-btn>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-    </v-app-bar> -->
+    
     
     <v-main class="blue-grey darken-4">
         <router-view />
@@ -166,9 +191,10 @@ export default {
   },
 }
 </script>
-<!-- 
+
 <style>
- .v-toolbar{
-  height: 30px;
- }
-</style>  -->
+.notcaps {
+  text-transform: none !important;
+}
+
+</style> 

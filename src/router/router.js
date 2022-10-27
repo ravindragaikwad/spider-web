@@ -13,10 +13,23 @@ const router = new Router({
             component: () => import('../components/HomePage.vue'),
         },
         {
-            path: '/AIMarketplace',
+            path: '/Products/AIMarketplace',
             name: 'AI Marketplace',
-            component: () => import('../components/AIMarketplace.vue'),
-        }
+            component: () => import('../components/Products/AIMarketplace.vue'),
+        },
+
+        // {
+        //     path: '/SpiderWebProducts',
+        //     name: 'Products',
+        //     component: () => import('../components/SpiderWebProducts.vue'),
+        //     children : [
+        //         {
+        //             path: '/Products/AIMarketplace',
+        //     name: 'AI Marketplace',
+        //     component: () => import('../components/Products/AIMarketplace.vue'),
+        //         },
+        //     ]
+        // }
     ]
 });
 
