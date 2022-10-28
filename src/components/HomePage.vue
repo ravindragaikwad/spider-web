@@ -4,7 +4,7 @@
         <v-row no-gutters>
           <div id="particles-js">
           <v-img
-            :min-height="'calc(100vh - ' + $vuetify.application.top + 'px)'"
+            height="'calc(50vh - ' + $vuetify.application.top + 'px)'"
             src="../assets/background-01.png"
             >
             <v-theme-provider dark>
@@ -14,9 +14,17 @@
                   class="white--text mx-auto"
                   justify="center"
                 >
+                <v-col
+                    class="white--text text-center"
+                    cols="6"
+                    tag="h1"
+                    align="right"
+                  >
+                  <v-spacer></v-spacer>
+                  </v-col>
                   <v-col
                     class="white--text text-center"
-                    cols="12"
+                    cols="6"
                     tag="h1"
                   >
                     <span
@@ -25,16 +33,13 @@
                     >
                     A next-generation decentralized Marketplace of Artificial Intelligence and Machine Learning models.
                     </span>
-
                     <br>
-
                     <span
                       :class="[$vuetify.breakpoint.smAndDown ? 'display-3': 'display-4']"
                       class="font-weight-black"
                     >
                       SpiderWeb
                     </span>
-
                   </v-col>
 
                   <v-btn
@@ -55,10 +60,8 @@
 
       <section id="about-me">
         <div class="py-12"></div>
-
         <v-container class="text-center">
           <h2 class="display-2 font-weight-bold white--text mb-3">ABOUT SpiderWeb</h2>
-
           <v-responsive
             class="mx-auto mb-8"
             width="56"

@@ -75,7 +75,7 @@
           HOME
         </v-btn>
         </div>
-         <v-menu offset-y>
+         <v-menu offset-y dark>
       <template v-slot:activator="{ on, attrs }">
         <v-btn
           dark
