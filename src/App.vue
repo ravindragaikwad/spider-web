@@ -25,7 +25,8 @@
       height="30px"
       >
         <v-toolbar-items>
-         <v-btn>Lightpaper</v-btn>
+         <v-btn href="../src/assets/files/Spiderweb_lightpaper.pdf" 
+   target="_blank" download>Lightpaper</v-btn>
          <v-btn>Whitepaper</v-btn>
          <v-btn>Wiki</v-btn>
          <v-btn>  <v-icon
