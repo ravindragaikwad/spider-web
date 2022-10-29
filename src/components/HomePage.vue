@@ -20,7 +20,13 @@
                     tag="h1"
                     align="right"
                   >
-                  <v-spacer></v-spacer>
+                 <v-img
+                 src="../assets/spider-web-logo.svg"
+                 dark
+                 height="150"
+                 width="150"
+                 >
+                 </v-img>
                   </v-col>
                   <v-col
                     class="white--text text-center"

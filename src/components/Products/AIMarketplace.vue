@@ -8,6 +8,13 @@
           height="200"
         >
       <v-toolbar-title>
+        <v-img
+        src="../../assets/spider-web-logo.svg"
+        dark
+        height="80"
+        width="80"
+        >
+        </v-img>
       <h3>AI Marketplace</h3>
       <p>A decentralized AI marketplace, uniting communities</p>
       </v-toolbar-title>
