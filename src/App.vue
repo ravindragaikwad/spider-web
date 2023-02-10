@@ -65,7 +65,6 @@
             {{ routerlink.routerlink.text }}
           </v-btn>
         </div> -->
-        <div>
           <v-btn
           dark
           small
@@ -76,7 +75,6 @@
         >
           HOME
         </v-btn>
-        </div>
          <v-menu offset-y dark>
       <template v-slot:activator="{ on, attrs }">
         <v-btn
@@ -114,25 +112,54 @@
           Best-Model-Fit
         </v-btn>
         </v-list-item>
-         <v-list-item
-        >
-          <v-btn
-          small
-          dark
-          v-bind:key="1"
-          :to="'\products\\AIMarketplace'"
-          color="gray" 
-        >
-          Creator IDE
-        </v-btn>
-        </v-list-item>
       </v-list>
+      
     </v-menu>
+    <v-btn
+      dark
+      small
+      v-bind="attrs"
+      v-on="on"
+      color="gray" text
+      :to="`/CreatorIDE`"
+    >
+      Creator IDE
+    </v-btn>
+    <v-spacer></v-spacer>
+    <v-btn
+    dark
+    small
+    @click="connectWallet"
+    color="gray" text
+  >
+  <v-icon
+  medium
+  color="orange darken-2"
+>
+mdi-wallet
+</v-icon>
+   {{ ConnectWalletButtonText }}
+  </v-btn>
         </v-toolbar>
       </template>
     </v-app-bar>
-    
-    
+    <v-snackbar
+      v-model="snackbar"
+      :timeout="timeout"
+      shaped
+    >
+      {{ text }}
+      <template v-slot:action="{ attrs }">
+        <v-btn
+          color="blue"
+          text
+          v-bind="attrs"
+          @click="snackbar = false"
+        >
+          Close
+        </v-btn>
+      </template>
+    </v-snackbar>
     <v-main class="blue-grey darken-4">
         <router-view />
     </v-main>
@@ -154,12 +181,14 @@ import { mapState } from 'vuex';
 export default {
   data: () => ({
     drawer: false,
+    IsMetamakSupported: false,
+            walletAddress:"",
+            chainId:"",
+            snackbar: false,
+      text: 'Please install Metamask extension.',
+      timeout: 4000,
+      ConnectWalletButtonText : "Connect Wallet",
     links: [
-      // "Payroll & HR",
-      // "Application Development",
-      // "Technlogies",
-      // "Careers",
-      // "Contact Us"
       "AI Marketplace"
     ],
     icons: [
@@ -175,6 +204,36 @@ export default {
     ],
     collapseOnScroll: true,
   }),
+  onmounted(){
+    if(window.ethereum !== null && window.ethereum !== "undefined"){
+      this.snackbar = true;
+    }
+    else {
+      this.snackbar = false;
+    }
+            //this.snackbar = window.ethereum !== "undefined";
+        },
+  methods:{
+    async connectWallet() {
+              const accounts = await window.ethereum.request({method: "eth_requestAccounts"});
+              this.walletAddress = accounts[0];
+              this.snackbar = true;
+              this.ConnectWalletButtonText = "Wallet Connected";
+
+              this.chainId = await window.ethereum
+                .request({
+                    method: "eth_chainId",
+                })
+                .then((chainData) => {
+                    return parseInt(chainData, 16);
+                })
+                .catch((ex) => {
+                    // 2.1 If the user cancels the login prompt
+                    throw Error(ex);
+                });
+              this.text = "Wallet connecte successfully : " + this.walletAddress  + " Chain Id :" + this.chainId;
+            }
+  },
   computed: {
     localAttrs() {
       const attrs = {};

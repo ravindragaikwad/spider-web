@@ -16,6 +16,12 @@ const state = {
                 value: '/SpiderWebProducts'
             }
         },
+        {
+            'routerlink': {
+                text: 'Creator IDE',
+                value: '/CreatorIDE'
+            }
+        },
     ]
 }
 
