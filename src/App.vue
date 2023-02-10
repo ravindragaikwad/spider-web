@@ -43,7 +43,8 @@
       mdi-twitter
     </v-icon>
     </v-btn>
-        <v-btn><v-icon
+        <v-btn href="https://discord.com/channels/1043941145908101150/1043943171392024676"
+        target="_blank"><v-icon
       medium
       color="blue darken-2"
     >

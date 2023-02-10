@@ -1,6 +1,5 @@
 <template>
     <v-container dark>
-
         <v-row>
             <v-col cols="3">
                 <v-combobox
@@ -27,8 +26,8 @@
             </v-col>
         </v-row>
         <v-row>
-            <v-card v-for="(item, index) in cards"
-            v-bind:key="index"
+            <v-card v-for="(item, modelId) in cards"
+            v-bind:key="modelId"
             class="mx-auto ma-2"
             max-width="374"
             height="300"
@@ -53,19 +52,11 @@
           >
             <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
           </v-btn>
-          <v-checkbox label="Compare">
+          <v-checkbox label="Compare" v-model="compareArray">
           </v-checkbox>
         </v-card-actions>
             </v-card>
     </v-row>
-    <!-- <v-badge
-    color="green"
-    overlap
-  >
-    <v-icon large>
-      compare-horizontal
-    </v-icon>
-  </v-badge> -->
     </v-container>
 </template>
 <script>
@@ -79,33 +70,40 @@ import imgImageEnhancements from '../../../assets/image-enhancements.jpg';
   export default {
     data: () => ({
 
+        compareArray: [],
         cards : [
         {
+            modelId: 1,
           title : "Real time voice cloning",
           subTitle : "Service to clone voices...",
           image : imgVoice
         },
         {
+            modelId : 2,
           title : "Geo location serivce",
           subTitle : "Service to find shortest distance between points...",
           image : imgGeo
         },
         {
+            modelId : 3,
           title : "Text Generation",
           subTitle : "Service to generate texts...",
           image : imgText
         },
         {
+            modelId : 4,
           title : "Weather Forecast",
           subTitle : "Service to predict weather forecast...",
           image : imgWeather
         },
         {
+            modelId : 5,
           title : "Machine Translation",
           subTitle : "Translate to and from any language...",
           image : imgMachineTranslation
         },
         {
+            modelId : 6,
           title : "Image Enhancements",
           subTitle : "Service to enhance images for e.g. sharpness, contrast, etc.",
           image : imgImageEnhancements
