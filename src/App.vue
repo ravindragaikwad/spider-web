@@ -205,34 +205,41 @@ export default {
     collapseOnScroll: true,
   }),
   onmounted(){
-    if(window.ethereum !== null && window.ethereum !== "undefined"){
-      this.snackbar = true;
-    }
-    else {
-      this.snackbar = false;
-    }
+   
             //this.snackbar = window.ethereum !== "undefined";
         },
   methods:{
     async connectWallet() {
-              const accounts = await window.ethereum.request({method: "eth_requestAccounts"});
-              this.walletAddress = accounts[0];
-              this.snackbar = true;
-              this.ConnectWalletButtonText = "Wallet Connected";
 
-              this.chainId = await window.ethereum
-                .request({
-                    method: "eth_chainId",
-                })
-                .then((chainData) => {
-                    return parseInt(chainData, 16);
-                })
-                .catch((ex) => {
-                    // 2.1 If the user cancels the login prompt
-                    throw Error(ex);
-                });
-              this.text = "Wallet connecte successfully : " + this.walletAddress  + " Chain Id :" + this.chainId;
-            }
+      if (typeof window.ethereum === "undefined" ) {
+        this.text = 'Please install Metamask extension.',
+          this.snackbar = true;
+          return;
+        }
+
+      // if (typeof window.ethereum !== 'undefined') {
+      //   this.text = 'Please install Metamask extension.',
+      //     this.snackbar = true;
+      //     return;
+      //   }
+        const accounts = await window.ethereum.request({method: "eth_requestAccounts"});
+        this.walletAddress = accounts[0];
+        this.snackbar = true;
+        this.ConnectWalletButtonText = "Wallet Connected";
+
+        this.chainId = await window.ethereum
+          .request({
+              method: "eth_chainId",
+          })
+          .then((chainData) => {
+              return parseInt(chainData, 16);
+          })
+          .catch((ex) => {
+              // 2.1 If the user cancels the login prompt
+              throw Error(ex);
+          });
+        this.text = "Wallet connected successfully : " + this.walletAddress  + " Chain Id :" + this.chainId;
+      }
   },
   computed: {
     localAttrs() {
