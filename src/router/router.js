@@ -22,6 +22,11 @@ const router = new Router({
             name: 'Creator IDE',
             component: () => import('../components/CreatorIDE.vue'),
         },
+        {
+            path: '/SpiChat',
+            name: 'Spi Chat',
+            component: () => import('../components/SpiChat.vue'),
+        },
     ]
 });
 

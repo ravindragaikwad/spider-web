@@ -84,7 +84,7 @@
           v-on="on"
           color="gray" text
         >
-          PRODUCTS
+          Marketplace
         </v-btn>
       </template>
       <v-list>
@@ -97,8 +97,7 @@
           :to="'/products/AIMarketplace'"
           color="gray" 
         >
-          AI Marketplace
-        </v-btn>
+Artificial Intelligence       </v-btn>
         </v-list-item>
          <v-list-item
         >
@@ -109,8 +108,7 @@
           :to="'\products\\AIMarketplace'"
           color="gray" 
         >
-          Best-Model-Fit
-        </v-btn>
+Datasets        </v-btn>
         </v-list-item>
       </v-list>
       
@@ -123,8 +121,38 @@
       color="gray" text
       :to="`/CreatorIDE`"
     >
-      Creator IDE
+      SPI Studio
     </v-btn>
+    <v-btn
+    dark
+    small
+    v-bind="attrs"
+    v-on="on"
+    color="gray" text
+    :to="`/Spichat`"
+  >
+SPIChat 
+ </v-btn>
+ <v-btn
+ dark
+ small
+ v-bind="attrs"
+ v-on="on"
+ color="gray" text
+ :to="`/Bounty`"
+>
+Bounty 
+</v-btn>
+<v-btn
+ dark
+ small
+ v-bind="attrs"
+ v-on="on"
+ color="gray" text
+ :to="`/Bounty`"
+>
+Explorer 
+</v-btn>
     <v-spacer></v-spacer>
     <v-btn
     dark
@@ -146,7 +174,10 @@ mdi-wallet
     <v-snackbar
       v-model="snackbar"
       :timeout="timeout"
-      shaped
+      color="blue-grey"
+      right
+      rounded="pill"
+      top
     >
       {{ text }}
       <template v-slot:action="{ attrs }">
@@ -216,7 +247,6 @@ export default {
           this.snackbar = true;
           return;
         }
-
       // if (typeof window.ethereum !== 'undefined') {
       //   this.text = 'Please install Metamask extension.',
       //     this.snackbar = true;
@@ -225,7 +255,6 @@ export default {
         const accounts = await window.ethereum.request({method: "eth_requestAccounts"});
         this.walletAddress = accounts[0];
         this.snackbar = true;
-        this.ConnectWalletButtonText = "Wallet Connected";
 
         this.chainId = await window.ethereum
           .request({
@@ -238,7 +267,16 @@ export default {
               // 2.1 If the user cancels the login prompt
               throw Error(ex);
           });
-        this.text = "Wallet connected successfully : " + this.walletAddress  + " Chain Id :" + this.chainId;
+
+          if(this.chainId == 80001){
+            this.ConnectWalletButtonText = "Wallet Connected";
+            this.text = "Wallet connected successfully : " + this.walletAddress  + " Chain Id :" + this.chainId;
+          }
+          else
+          {
+            this.ConnectWalletButtonText = "Connect Wallet";
+            this.text = "Incorrect network selected! Please select \"Mumbai Testnet\" in your wallet.";
+          }
       }
   },
   computed: {

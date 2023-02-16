@@ -15,8 +15,8 @@
         width="40"
         >
         </v-img> -->
-      <h2>Creator IDE</h2>
-      <p>Start in seconds! Connect your crypto wallet to start using the app in seconds. </p>
+      <h2>Creator Zone</h2>
+      <p>Start in seconds! Connect your crypto wallet to start monetizing your model.</p>
       <p>No registration needed.</p>
       </v-toolbar-title>
     </v-toolbar>
